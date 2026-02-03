@@ -8,7 +8,7 @@ import * as THREE from 'three';
 
 function Bubbles() {
     const ref = useRef();
-    const count = 50;
+    const count = 30;
 
     const particles = useMemo(() => {
         const temp = [];
@@ -77,7 +77,7 @@ export default function Hero() {
         <section id="hero" className="relative h-screen w-full bg-gradient-to-b from-[#001f3f] to-[#003366] overflow-hidden">
             {/* 3D Canvas Layer */}
             <div className="absolute inset-0 z-0">
-                <Canvas camera={{ position: [0, 0, 5], fov: 75 }}>
+                <Canvas camera={{ position: [0, 0, 5], fov: 75 }} dpr={[1, 2]} performance={{ min: 0.5 }}>
                     <AnimatedBackground />
                     <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.5} />
                 </Canvas>
@@ -96,9 +96,8 @@ export default function Hero() {
                 </motion.div>
 
                 <motion.h1
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
+                    initial={{ opacity: 1 }}
+                    animate={{ opacity: 1 }}
                     className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight"
                 >
                     Premium Doorstep Car Wash in Bengaluru
