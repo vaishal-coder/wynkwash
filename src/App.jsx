@@ -1,22 +1,25 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
-import Hero from './components/Hero';
-import Services from './components/Services';
-import Features from './components/Features';
-import WhatsAppSection from './components/WhatsAppSection';
-import ServiceAreas from './components/ServiceAreas';
-import WhatsAppFloat from './components/WhatsAppFloat';
+import Home from './pages/Home';
+import WhatsAppRedirect from './pages/WhatsAppRedirect';
 
 function App() {
   return (
-    <Layout>
-      <Hero />
-      <Services />
-      <WhatsAppSection />
-      <Features />
-      <ServiceAreas />
-      <WhatsAppFloat />
-    </Layout>
+    <Router>
+      <Routes>
+        {/* Main landing page */}
+        <Route path="/" element={
+          <Layout>
+            <Home />
+          </Layout>
+        } />
+
+        {/* WhatsApp redirect page */}
+        <Route path="/whatsapp" element={<WhatsAppRedirect />} />
+      </Routes>
+    </Router>
   );
 }
 
 export default App;
+
