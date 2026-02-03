@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: #003366;
+    --primary-dark: #002244;
+    --accent: #00A4CC;
+    --white: #FFFFFF;
+  }
+
+  body {
+    @apply font-sans bg-gray-50 text-gray-900 antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #003366 0%, #00A4CC 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .bg-gradient-hero {
+    background: linear-gradient(135deg, #001f3f 0%, #003366 100%);
+  }
+
+  @keyframes pulse-subtle {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.9; }
+  }
+
+  .animate-pulse-subtle {
+    animation: pulse-subtle 3s ease-in-out infinite;
+  }
+}
