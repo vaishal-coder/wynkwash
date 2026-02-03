@@ -8,7 +8,7 @@ export default function Footer() {
                     {/* Brand */}
                     <div className="space-y-4">
                         <div className="flex flex-col gap-2">
-                            <img src="/assets/logo.png" alt="WynkWash" className="h-10 w-fit opacity-90" />
+                            <img src="/assets/logo.png" alt="WynkWash Footer Logo" className="h-10 w-fit opacity-90" width="100" height="40" loading="lazy" />
                             <h4 className="text-blue-200 font-bold text-xl">Laggere Hub</h4>
                         </div>
                         <p className="text-gray-400 text-sm leading-relaxed max-w-xs">

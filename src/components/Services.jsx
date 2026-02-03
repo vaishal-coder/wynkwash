@@ -76,10 +76,10 @@ export default function Services() {
                                 borderColor: selected === key ? '#00A4CC' : 'transparent',
                                 boxShadow: selected === key ? '0 20px 40px rgba(0, 164, 204, 0.2)' : '0 10px 30px rgba(0,0,0,0.05)'
                             }}
-                            className={`relative w-80 bg-white p-8 rounded-3xl cursor-pointer border-2 transition-all duration-300 ${selected === key ? 'border-accent' : 'border-transparent'}`}
+                            className={`relative w-full max-w-[340px] md:w-80 bg-white p-8 rounded-3xl cursor-pointer border-2 transition-all duration-300 ${selected === key ? 'border-accent' : 'border-transparent'}`}
                         >
                             <div className={`w-24 h-24 mx-auto rounded-3xl overflow-hidden flex items-center justify-center mb-6 transition-all duration-500 ${selected === key ? 'bg-white shadow-2xl scale-110' : 'bg-gray-100 opacity-80'}`}>
-                                <img src={data.icon} alt={data.title} className="w-full h-full object-cover" />
+                                <img src={data.icon} alt={data.title} className="w-full h-full object-cover" loading="lazy" decoding="async" />
                             </div>
                             <h3 className="text-xl font-bold text-gray-800 text-center mb-2">{data.title}</h3>
                             <p className="text-gray-500 text-center text-sm">{data.desc}</p>

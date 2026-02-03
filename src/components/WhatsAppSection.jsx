@@ -21,8 +21,12 @@ export default function WhatsAppSection() {
                 <div className="bg-white p-4 rounded-2xl shadow-xl text-center">
                     <img
                         src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://wa.me/918870037600"
-                        alt="Scan to Book"
+                        alt="Scan QR code to book via WhatsApp"
                         className="w-48 h-48 mb-2"
+                        width="200"
+                        height="200"
+                        loading="lazy"
+                        decoding="async"
                     />
                     <p className="text-gray-800 font-medium">Scan to Book</p>
                 </div>

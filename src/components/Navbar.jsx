@@ -21,9 +21,8 @@ export default function Navbar() {
     return (
         <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-5'}`}>
             <div className="container mx-auto px-6 flex justify-between items-center">
-                <a href="#" className="flex items-center gap-3">
-                    {/* Logo - assuming logo.png exists */}
-                    <img src="/assets/logo.png" alt="WynkWash" className="h-10 w-auto" />
+                <a href="/" className="flex items-center gap-3" aria-label="WynkWash Home">
+                    <img src="/assets/logo.png" alt="WynkWash Logo" className="h-10 w-auto" width="40" height="40" />
                     <span className={`font-bold text-lg tracking-tight ${scrolled ? 'text-primary' : 'text-white'}`}>
                         Laggere Hub
                     </span>
