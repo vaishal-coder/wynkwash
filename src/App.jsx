@@ -6,6 +6,7 @@ import WhatsAppSection from './components/WhatsAppSection';
 import ServiceAreas from './components/ServiceAreas';
 import HowItWorks from './components/HowItWorks';
 import Testimonials from './components/Testimonials';
+import WhyChooseUs from './components/WhyChooseUs';
 import WhatsAppFloat from './components/WhatsAppFloat';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <Layout>
       <Hero />
       <HowItWorks />
+      <WhyChooseUs />
       <Services />
       <WhatsAppSection />
       <Features />

@@ -1,4 +1,4 @@
-import { MessageCircle, MapPin, Phone, Mail } from 'lucide-react';
+import { MessageCircle, MapPin, Phone, Mail, Facebook, Instagram, Linkedin, Youtube, Twitter } from 'lucide-react';
 
 export default function Footer() {
     return (
@@ -6,7 +6,7 @@ export default function Footer() {
             <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
                     {/* Brand */}
-                    <div className="space-y-4">
+                    <div className="space-y-6">
                         <div className="flex flex-col gap-2">
                             <img src="/assets/logo.png" alt="WynkWash Footer Logo" className="h-10 w-fit opacity-90" width="100" height="40" loading="lazy" />
                             <h4 className="text-blue-200 font-bold text-xl">Laggere Hub</h4>
@@ -14,6 +14,13 @@ export default function Footer() {
                         <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
                             Premium doorstep car wash service in Bengaluru. We bring the shine to your doorstep with our professional team and eco-friendly products.
                         </p>
+                        <div className="flex gap-4">
+                            <a href="https://facebook.com/wynkwash" aria-label="Facebook" className="text-gray-400 hover:text-accent transition-colors"><Facebook size={20} /></a>
+                            <a href="https://instagram.com/wynkwash" aria-label="Instagram" className="text-gray-400 hover:text-accent transition-colors"><Instagram size={20} /></a>
+                            <a href="https://linkedin.com/company/wynkwash" aria-label="LinkedIn" className="text-gray-400 hover:text-accent transition-colors"><Linkedin size={20} /></a>
+                            <a href="https://youtube.com/@wynkwash" aria-label="YouTube" className="text-gray-400 hover:text-accent transition-colors"><Youtube size={20} /></a>
+                            <a href="https://twitter.com/wynkwash" aria-label="Twitter (X)" className="text-gray-400 hover:text-accent transition-colors"><Twitter size={20} /></a>
+                        </div>
                     </div>
 
                     {/* Links */}
@@ -30,7 +37,7 @@ export default function Footer() {
                         <h4 className="text-lg font-semibold text-blue-200 mb-2">Contact Us</h4>
                         <div className="flex items-start gap-3 text-gray-400">
                             <MapPin size={18} className="text-blue-400 mt-1 flex-shrink-0" />
-                            <span>Laggere, Bangalore</span>
+                            <span>Kapila Nagar, Laggere, Bengaluru, Karnataka 560058</span>
                         </div>
                         <div className="flex items-center gap-3 text-gray-400">
                             <Phone size={18} className="text-blue-400" />

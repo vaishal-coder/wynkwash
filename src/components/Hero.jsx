@@ -63,7 +63,7 @@ function Bubbles() {
 function AnimatedBackground() {
     return (
         <group>
-            <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={1} />
+            <Stars radius={100} depth={50} count={2000} factor={4} saturation={0} fade speed={1} />
             <Bubbles />
             <ambientLight intensity={0.5} />
             <directionalLight position={[10, 10, 5]} intensity={1} color="#ffffff" />
@@ -95,13 +95,11 @@ export default function Hero() {
                     </span>
                 </motion.div>
 
-                <motion.h1
-                    initial={{ opacity: 1 }}
-                    animate={{ opacity: 1 }}
+                <h1
                     className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight"
                 >
                     Premium Doorstep Car Wash in Bengaluru
-                </motion.h1>
+                </h1>
 
                 <motion.p
                     initial={{ opacity: 0 }}
