@@ -4,19 +4,19 @@ import { motion } from 'framer-motion';
 const reviews = [
     {
         name: "Satish K.",
-        location: "Rajajinagar",
+        location: "Bengaluru",
         text: "The best doorstep service in Bengaluru. They brought their own water and power. My SUV looks brand new!",
         rating: 5
     },
     {
         name: "Megha Rao",
-        location: "Malleshwaram",
+        location: "Bengaluru",
         text: "Super convenient. I didn't even have to leave my office. The interior deep cleaning is top notch.",
         rating: 5
     },
     {
         name: "Arjun V.",
-        location: "Laggere Hub",
+        location: "Bengaluru",
         text: "Professional team and great attention to detail. Worth every rupee for the quality they provide.",
         rating: 5
     }

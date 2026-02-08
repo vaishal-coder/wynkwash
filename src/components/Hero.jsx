@@ -91,7 +91,7 @@ export default function Hero() {
                     transition={{ duration: 0.8 }}
                 >
                     <span className="inline-block py-1 px-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-sm font-medium tracking-wide mb-6 uppercase">
-                        Serving West Bengaluru
+                        Serving Bengaluru
                     </span>
                 </motion.div>
 
@@ -110,7 +110,7 @@ export default function Hero() {
                     transition={{ duration: 0.8, delay: 0.4 }}
                     className="text-base sm:text-lg md:text-xl text-blue-100 mb-10 max-w-2xl px-6"
                 >
-                    Serving Laggere, Malleshwaram, Rajajinagar, Basaveshwaranagar & Vijayanagar
+                    Premium Car Wash Service Across Bengaluru
                 </motion.p>
 
                 <motion.div
@@ -119,12 +119,12 @@ export default function Hero() {
                     transition={{ duration: 0.8, delay: 0.6 }}
                     className="flex flex-col items-center gap-6 mb-12"
                 >
-                    <div className="flex flex-col sm:flex-row gap-4">
-                        <a href="https://wa.me/918870037600?text=Hello%20Team!%20I%E2%80%99m%20interested%20in%20your%20premium%20doorstep%20car%20wash%20service%20in%20Bengaluru.%20Please%20share%20the%20available%20plans%2C%20pricing%2C%20and%20next%20available%20slot.%20Thank%20you." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-lg shadow-green-500/30 hover:shadow-green-500/50">
+                    <div className="flex flex-col sm:flex-row gap-4 w-full max-w-sm sm:max-w-none px-4 sm:px-0">
+                        <a href="https://wa.me/918870037600?text=Hello%20Team!%20I%E2%80%99m%20interested%20in%20your%20premium%20doorstep%20car%20wash%20service%20in%20Bengaluru.%20Please%20share%20the%20available%20plans%2C%20pricing%2C%20and%20next%20available%20slot.%20Thank%20you." target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-lg shadow-green-500/30 hover:shadow-green-500/50 w-full sm:w-auto">
                             <MessageCircle size={24} />
                             Book via WhatsApp
                         </a>
-                        <a href="#services" className="flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-full font-bold text-lg transition-all">
+                        <a href="#services" className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-full font-bold text-lg transition-all w-full sm:w-auto">
                             View Plans
                             <ChevronRight size={20} />
                         </a>

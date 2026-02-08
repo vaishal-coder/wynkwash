@@ -15,7 +15,7 @@ const reasons = [
     {
         icon: <Clock className="text-accent" />,
         title: "Punctuality",
-        desc: "We arrive at your location exactly when promised. Whether it's Laggere or Rajajinagar, our mobile units are strategically positioned to minimize wait times."
+        desc: "We arrive at your location exactly when promised. Our mobile units are strategically positioned across Bengaluru to minimize wait times."
     },
     {
         icon: <Leaf className="text-accent" />,
@@ -33,7 +33,7 @@ export default function WhyChooseUs() {
                         <h2 className="text-4xl font-bold text-primary mb-6">Why WynkWash is Bengalurus #1 Doorstep Car Spa</h2>
                         <div className="prose prose-blue text-gray-600 space-y-4 max-w-none">
                             <p>
-                                Finding a reliable car wash in a busy city like Bengaluru can be a daunting task. Between the traffic of Malleshwaram and the narrow streets of Laggere, taking your car to a physical service center often means losing half your day. That is where <strong>WynkWash</strong> steps in. We bring the entire car spa experience directly to your doorstep, whether you are at home or at your office.
+                                Finding a reliable car wash in a busy city like Bengaluru can be a daunting task. Taking your car to a physical service center often means losing half your day. That is where <strong>WynkWash</strong> steps in. We bring the entire car spa experience directly to your doorstep, whether you are at home or at your office.
                             </p>
                             <p>
                                 Our mission is to provide premium vehicle care that combines convenience with unmatched quality. We do not just wash cars; we rejuvenate them. Our professional detailing team uses advanced pressure washers, high-grade microfiber towels, and premium waxes to ensure every inch of your vehicle shines like it just rolled out of the showroom.
@@ -42,7 +42,7 @@ export default function WhyChooseUs() {
                                 At WynkWash, we understand that every car is different. A hatchback like an Alto requires a different approach than a luxury BMW or a rugged XUV700. That is why we offer tailored packages designed specifically for your vehicle type. From basic exterior washes to complete interior deep cleaning and paint protection, we have a solution for every need and budget.
                             </p>
                             <p>
-                                We are proud to serve the vibrant communities of West Bengaluru, including Basaveshwaranagar, Vijayanagar, and beyond. By choosing WynkWash, you are not just getting a clean car; you are reclaiming your time and supporting a service that prioritizes quality, reliability, and customer satisfaction above all else. Our recurring maintenance plans are particularly popular, providing consistent care that preserves your car's resale value and aesthetic appeal year-round.
+                                We are proud to serve the vibrant communities across Bengaluru. By choosing WynkWash, you are not just getting a clean car; you are reclaiming your time and supporting a service that prioritizes quality, reliability, and customer satisfaction above all else. Our recurring maintenance plans are particularly popular, providing consistent care that preserves your car's resale value and aesthetic appeal year-round.
                             </p>
                         </div>
 

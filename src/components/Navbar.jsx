@@ -15,15 +15,18 @@ export default function Navbar() {
         { name: 'Home', href: '#hero' },
         { name: 'Services', href: '#services' },
         { name: 'Pricing', href: '#pricing' },
-        { name: 'Areas', href: '#areas' },
     ];
 
     return (
         <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-5'}`}>
             <div className="container mx-auto px-6 flex justify-between items-center">
                 <a href="#" className="flex items-center gap-2">
-                    {/* Logo - assuming logo.png exists */}
-                    <img src="/assets/logo.png" alt="WynkWash" className="h-12 w-auto" />
+                    {/* Swap logo based on scroll state for better visibility */}
+                    <img
+                        src={scrolled ? "/assets/logo_scrolled.png" : "/assets/logo.png"}
+                        alt="WynkWash"
+                        className="h-10 sm:h-12 md:h-20 w-auto transition-all duration-300"
+                    />
                 </a>
 
                 {/* Desktop Menu */}

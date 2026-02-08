@@ -7,7 +7,7 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
                     {/* Brand */}
                     <div className="space-y-6">
-                        <img src="/assets/logo.png" alt="WynkWash" className="h-10 opacity-90" />
+                        <img src="/assets/logo.png" alt="WynkWash" className="h-14 md:h-16 opacity-90" />
                         <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
                             Premium doorstep car wash service in Bengaluru. We bring the shine to your doorstep with our professional team and eco-friendly products.
                         </p>
@@ -30,7 +30,6 @@ export default function Footer() {
                         <a href="#hero" className="text-gray-400 hover:text-white transition-colors">Home</a>
                         <a href="#services" className="text-gray-400 hover:text-white transition-colors">Services</a>
                         <a href="#pricing" className="text-gray-400 hover:text-white transition-colors">Pricing</a>
-                        <a href="#areas" className="text-gray-400 hover:text-white transition-colors">Service Areas</a>
                     </div>
 
                     {/* Contact */}
@@ -38,7 +37,7 @@ export default function Footer() {
                         <h4 className="text-lg font-semibold text-blue-200 mb-2">Contact Us</h4>
                         <div className="flex items-center gap-3 text-gray-400">
                             <MapPin size={18} className="text-blue-400" />
-                            <span>Laggere, Bengaluru (560058)</span>
+                            <span>Bengaluru, India</span>
                         </div>
                         <div className="flex items-center gap-3 text-gray-400">
                             <Phone size={18} className="text-blue-400" />
@@ -52,7 +51,7 @@ export default function Footer() {
                 </div>
 
                 <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
-                    <p>&copy; {new Date().getFullYear()} WynkWash. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} Cloudcouch Tech Pvt Ltd. All rights reserved.</p>
                     <div className="flex gap-6">
                         <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
                         <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
