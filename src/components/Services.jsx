@@ -1,165 +1,71 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ShieldCheck, ArrowRight, ChevronDown, ChevronUp } from 'lucide-react';
-
-const pricingData = {
-    hatchback: {
-        title: "Hatchback",
-        desc: "Ideal for Alto, Swift, i10, Kwid, etc.",
-        image: "/assets/vehicles/hatchback.jpg",
-        plans: [
-            { name: "Premium Doorstep Wash", price: 1079, original: 1199 },
-            { name: "Interior Deep Cleaning", price: 3149, original: 3499 },
-            { name: "Exterior Rubbing & Waxing", price: 3599, original: 3999 },
-            { name: "Complete Car Spa", price: 5399, original: 5999 },
-            { name: "Monthly Premium Maintenance (4 Washes)", price: 2699, original: 2999 }
-        ]
-    },
-    sedan: {
-        title: "Sedan",
-        desc: "Ideal for City, Verna, Dzire, Amaze, etc.",
-        image: "/assets/vehicles/sedan.jpg",
-        plans: [
-            { name: "Premium Doorstep Wash", price: 1169, original: 1299 },
-            { name: "Interior Deep Cleaning", price: 3599, original: 3999 },
-            { name: "Exterior Rubbing & Waxing", price: 4049, original: 4499 },
-            { name: "Complete Car Spa", price: 6299, original: 6999 },
-            { name: "Monthly Premium Maintenance (4 Washes)", price: 3149, original: 3499 }
-        ]
-    },
-    suv: {
-        title: "SUV / XUV",
-        desc: "Ideal for Creta, Brezza, Innova, XUV700, etc.",
-        image: "/assets/vehicles/suv.jpg",
-        plans: [
-            { name: "Premium Doorstep Wash", price: 1259, original: 1399 },
-            { name: "Interior Deep Cleaning", price: 4049, original: 4499 },
-            { name: "Exterior Rubbing & Waxing", price: 4499, original: 4999 },
-            { name: "Complete Car Spa", price: 7199, original: 7999 },
-            { name: "Monthly Premium Maintenance (4 Washes)", price: 3599, original: 3999 }
-        ]
-    },
-    luxury: {
-        title: "Luxury Cars",
-        desc: "BMW, Mercedes, Audi, Jaguar, etc.",
-        image: "/assets/vehicles/luxury.jpg",
-        plans: [
-            { name: "Premium Doorstep Wash", price: 1439, original: 1599 },
-            { name: "Interior Deep Cleaning", price: 4499, original: 4999 },
-            { name: "Exterior Rubbing & Waxing", price: 4949, original: 5499 },
-            { name: "Complete Car Spa", price: 8099, original: 8999 },
-            { name: "Monthly Premium Maintenance (4 Washes)", price: 4049, original: 4499 }
-        ]
-    }
-};
+import { motion } from 'framer-motion';
+import { MessageCircle, Phone } from 'lucide-react';
 
 export default function Services() {
-    const [selected, setSelected] = useState(null);
-
-    const toggleSelect = (key) => {
-        setSelected(selected === key ? null : key);
-        if (selected !== key) {
-            setTimeout(() => {
-                const element = document.getElementById(`pricing-${key}`);
-                if (element) {
-                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            }, 100);
-        }
-    };
-
     return (
         <section id="services" className="py-24 bg-gray-50 relative overflow-hidden">
             <div className="container mx-auto px-6">
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl font-bold text-primary mb-4">Choose Your Vehicle</h2>
-                    <p className="text-gray-500 text-lg">Select your car type to view exclusive doorstep plans</p>
+
+                {/* Section Heading */}
+                <div className="text-center mb-10">
+                    <h2 className="text-4xl font-bold text-primary mb-4">Our Services</h2>
+                    <p className="text-gray-500 text-lg">Premium doorstep car wash packages tailored for every vehicle</p>
                 </div>
 
-                <div className="flex flex-col gap-6 max-w-4xl mx-auto">
-                    {Object.entries(pricingData).map(([key, data]) => (
-                        <div key={key} id={`pricing-${key}`} className="w-full">
-                            <motion.div
-                                onClick={() => toggleSelect(key)}
-                                whileHover={{ y: -5 }}
-                                className={`relative w-full bg-white p-6 sm:p-8 rounded-3xl cursor-pointer border-2 transition-all duration-300 flex flex-col sm:flex-row items-center gap-6 ${selected === key ? 'border-accent shadow-xl shadow-accent/10' : 'border-transparent shadow-sm'}`}
-                            >
-                                <div className="w-32 h-20 flex items-center justify-center shrink-0">
-                                    <img
-                                        src={data.image}
-                                        alt={data.title}
-                                        className={`w-full h-full object-contain transition-all duration-500 ${selected === key ? 'scale-110' : 'grayscale opacity-70 group-hover:grayscale-0'}`}
-                                    />
-                                </div>
+                {/* Promo Poster */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className="flex justify-center mb-10"
+                >
+                    <img
+                        src="/assets/promo_poster.jpeg"
+                        alt="WynkWash Promotional Poster - Doorstep Car Wash Bangalore"
+                        className="w-full max-w-2xl rounded-3xl shadow-2xl object-contain border border-gray-100"
+                    />
+                </motion.div>
 
-                                <div className="flex-grow text-center sm:text-left">
-                                    <h3 className="text-2xl font-bold text-gray-800 mb-1">{data.title}</h3>
-                                    <p className="text-gray-500 text-sm leading-relaxed">{data.desc}</p>
-                                </div>
+                {/* Contact for Pricing CTA */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    className="flex flex-col items-center text-center gap-4 max-w-xl mx-auto"
+                >
+                    <p className="text-gray-500 text-base tracking-wide uppercase font-semibold">
+                        Transparent Pricing. No Hidden Charges.
+                    </p>
+                    <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 leading-snug">
+                        Interested in a package? <br className="hidden sm:block" />
+                        <span className="text-primary">Reach out for a personalised quote.</span>
+                    </h3>
+                    <p className="text-gray-400 text-sm">
+                        Our team is available <strong className="text-gray-600">6:00 AM – 9:00 PM</strong>, all days. We'll help you choose the right plan for your vehicle.
+                    </p>
 
-                                <div className="w-full sm:w-auto shrink-0 flex items-center justify-center gap-4">
-                                    <button className={`flex-grow sm:flex-grow-0 px-8 py-3 rounded-full text-sm font-bold transition-all ${selected === key ? 'bg-primary text-white' : 'border border-gray-300 text-gray-400 hover:border-accent hover:text-accent'}`}>
-                                        {selected === key ? 'Close' : 'View Plans'}
-                                    </button>
-                                    <div className={`hidden sm:block transition-transform duration-300 ${selected === key ? 'rotate-180 text-accent' : 'text-gray-300'}`}>
-                                        <ChevronDown size={24} />
-                                    </div>
-                                </div>
-                            </motion.div>
+                    <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full sm:w-auto">
+                        <a
+                            href="https://wa.me/918870037600?text=Hello%20Team!%20I%E2%80%99m%20interested%20in%20your%20doorstep%20car%20wash%20packages.%20Please%20share%20the%20pricing%20and%20available%20slots.%20Thank%20you."
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 w-full sm:w-auto"
+                        >
+                            <MessageCircle size={20} />
+                            Chat on WhatsApp
+                        </a>
+                        <a
+                            href="tel:+918870037600"
+                            className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 rounded-full font-bold shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1 w-full sm:w-auto"
+                        >
+                            <Phone size={20} />
+                            Call Us Now
+                        </a>
+                    </div>
+                </motion.div>
 
-                            <AnimatePresence>
-                                {selected === key && (
-                                    <motion.div
-                                        initial={{ height: 0, opacity: 0 }}
-                                        animate={{ height: 'auto', opacity: 1 }}
-                                        exit={{ height: 0, opacity: 0 }}
-                                        transition={{ duration: 0.4, ease: "easeInOut" }}
-                                        className="overflow-hidden"
-                                    >
-                                        <div className="pt-6 pb-4">
-                                            <div className="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden">
-                                                <div className="p-6 border-b border-gray-100 bg-gray-50 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
-                                                    <div>
-                                                        <h4 className="text-xl font-bold text-primary">{data.title} Packages</h4>
-                                                        <p className="text-gray-500 text-xs">Best rates with <span className="text-red-500 font-bold">10% OFF</span> included</p>
-                                                    </div>
-                                                    <div className="flex items-center gap-2 px-4 py-2 bg-primary rounded-xl">
-                                                        <ShieldCheck size={18} className="text-accent" />
-                                                        <span className="text-white font-bold text-xs uppercase tracking-wider">Verified</span>
-                                                    </div>
-                                                </div>
-
-                                                <div className="divide-y divide-gray-100">
-                                                    {data.plans.map((plan, index) => (
-                                                        <div key={index} className="p-5 flex justify-between items-center hover:bg-gray-50 transition-colors group">
-                                                            <span className="font-medium text-gray-700 group-hover:text-primary transition-colors text-sm sm:text-base pr-4">{plan.name}</span>
-                                                            <div className="text-right shrink-0">
-                                                                <span className="block text-[10px] sm:text-xs text-gray-400 line-through">₹{plan.original}</span>
-                                                                <span className="text-base sm:text-lg font-bold text-gray-900">₹{plan.price}</span>
-                                                            </div>
-                                                        </div>
-                                                    ))}
-                                                </div>
-
-                                                <div className="p-6 bg-gray-50 text-center">
-                                                    <a
-                                                        href={`https://wa.me/918870037600?text=Hello%20Team!%20I%E2%80%99m%20interested%20in%20your%20premium%20doorstep%20car%20wash%20for%20my%20${data.title}.%20Please%20share%20the%20available%20plans%2C%20pricing%2C%20and%20next%20available%20slot.%20Thank%20you.`}
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                        className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-blue-800 text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 w-full sm:w-auto"
-                                                    >
-                                                        Book via WhatsApp
-                                                        <ArrowRight size={18} />
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </motion.div>
-                                )}
-                            </AnimatePresence>
-                        </div>
-                    ))}
-                </div>
             </div>
         </section>
     );
