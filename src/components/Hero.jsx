@@ -267,7 +267,7 @@ export default function Hero() {
                         </span>
                         <span className="flex items-center gap-2">
                             <CheckCircle size={13} className="text-blue-400 shrink-0" />
-                            4.9★ Rated Service
+                            5.0★ Rated Service
                         </span>
                         <span className="flex items-center gap-2">
                             <CheckCircle size={13} className="text-blue-400 shrink-0" />

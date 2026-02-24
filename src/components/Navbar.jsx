@@ -12,20 +12,19 @@ export default function Navbar() {
     }, []);
 
     const navLinks = [
-        { name: 'Home', href: '#hero' },
+        { name: 'Home', href: '#home' },
         { name: 'Services', href: '#services' },
-        { name: 'Pricing', href: '#pricing' },
     ];
 
     return (
-        <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-5'}`}>
+        <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-2' : 'bg-transparent py-4'}`}>
             <div className="container mx-auto px-6 flex justify-between items-center">
                 <a href="#" className="flex items-center gap-2">
                     {/* Swap logo based on scroll state for better visibility */}
                     <img
                         src={scrolled ? "/assets/logo_scrolled.png" : "/assets/logo.png"}
-                        alt="WynkWash"
-                        className="h-10 sm:h-12 md:h-20 w-auto transition-all duration-300"
+                        alt="WynkWash – Doorstep Car Wash Bangalore"
+                        className="h-20 sm:h-24 md:h-28 w-auto max-w-[200px] md:max-w-[280px] transition-all duration-300 object-contain"
                     />
                 </a>
 

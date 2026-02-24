@@ -29,7 +29,6 @@ export default function Footer() {
                         <h4 className="text-lg font-semibold text-blue-200 mb-2">Quick Links</h4>
                         <a href="#hero" className="text-gray-400 hover:text-white transition-colors">Home</a>
                         <a href="#services" className="text-gray-400 hover:text-white transition-colors">Services</a>
-                        <a href="#pricing" className="text-gray-400 hover:text-white transition-colors">Pricing</a>
                     </div>
 
                     {/* Contact */}
