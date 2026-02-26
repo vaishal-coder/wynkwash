@@ -36,32 +36,6 @@ export default function Navbar() {
                         />
                     </a>
 
-                    {/* ── Mobile: phone + QR strip between logo and hamburger ── */}
-                    <div className="flex md:hidden items-center gap-3 flex-1 justify-center px-3">
-                        <a
-                            href="tel:+918870037600"
-                            className={`flex items-center gap-1.5 font-black text-sm tracking-tight ${scrolled ? 'text-blue-700' : 'text-white'}`}
-                        >
-                            <Phone size={13} />
-                            88700&nbsp;37600
-                        </a>
-                        <a
-                            href={WA_URL}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="shrink-0"
-                            aria-label="Scan QR to book on WhatsApp"
-                        >
-                            <div className={`rounded-lg overflow-hidden border-2 transition-colors ${scrolled ? 'border-blue-200' : 'border-white/30'}`}>
-                                <img
-                                    src="/assets/qr_code.png"
-                                    alt="QR code – book WynkWash on WhatsApp"
-                                    className="w-10 h-10 block"
-                                />
-                            </div>
-                        </a>
-                    </div>
-
                     {/* Desktop Menu */}
                     <div className="hidden md:flex items-center gap-7">
                         {navLinks.map((link) =>
@@ -130,7 +104,8 @@ export default function Navbar() {
 
             {/* Mobile Dropdown */}
             {isOpen && (
-                <div className="absolute top-full left-0 w-full bg-white shadow-2xl py-8 flex flex-col items-center gap-5 md:hidden border-t border-gray-100">
+                <div className="absolute top-full left-0 w-full bg-white/95 backdrop-blur-md shadow-xl py-6 flex flex-col items-center gap-6 md:hidden border-t border-gray-200">
+
                     {navLinks.map((link) =>
                         link.external ? (
                             <a
@@ -139,38 +114,39 @@ export default function Navbar() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 onClick={() => setIsOpen(false)}
-                                className="text-green-700 font-bold text-xl tracking-wide hover:text-green-600 transition-colors"
+                                className="text-gray-900 font-semibold text-lg tracking-wide hover:text-blue-600 transition-colors"
                             >
-                                💬 {link.name}
+                                {link.name}
                             </a>
                         ) : (
                             <a
                                 key={link.name}
                                 href={link.href}
                                 onClick={() => setIsOpen(false)}
-                                className="text-gray-800 font-semibold text-xl tracking-wide hover:text-blue-600 transition-colors"
+                                className="text-gray-900 font-semibold text-lg tracking-wide hover:text-blue-600 transition-colors"
                             >
                                 {link.name}
                             </a>
                         )
                     )}
 
-                    <div className="w-full px-8 flex flex-col gap-3 mt-2">
+                    <div className="w-full px-6 flex flex-col gap-3 mt-2">
                         <a
                             href="tel:+918870037600"
-                            className="flex items-center justify-center gap-3 py-4 bg-gray-50 rounded-2xl text-blue-700 font-bold text-lg"
+                            className="flex items-center justify-center gap-2 py-3 bg-gray-100 rounded-xl text-blue-700 font-semibold text-base"
                         >
-                            <Phone size={20} />
+                            <Phone size={18} />
                             +91 88700 37600
                         </a>
+
                         <a
                             href={WA_URL}
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={() => setIsOpen(false)}
-                            className="flex items-center justify-center gap-3 bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-2xl font-bold text-lg shadow-xl shadow-blue-600/20 transition-all"
+                            className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-semibold text-base transition-all"
                         >
-                            <MessageCircle size={20} />
+                            <MessageCircle size={18} />
                             Book via WhatsApp
                         </a>
                     </div>
