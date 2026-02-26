@@ -32,7 +32,7 @@ export default function Navbar() {
                         <img
                             src={scrolled ? "/assets/logo_scrolled.png" : "/assets/logo.png"}
                             alt="WynkWash – Doorstep Car Wash Bangalore"
-                            className="h-20 sm:h-24 md:h-28 w-auto max-w-[200px] md:max-w-[280px] transition-all duration-300 object-contain"
+                            className="h-14 sm:h-16 md:h-18 w-auto max-w-[180px] md:max-w-[220px] transition-all duration-300 object-contain"
                         />
                     </a>
 

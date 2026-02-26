@@ -151,6 +151,15 @@ export default function Hero() {
                 background: 'linear-gradient(to bottom, transparent, #060f1a)'
             }} />
 
+            {/* Center Background Brand Name */}
+            <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none hidden lg:flex">
+                <h1
+                    className="font-black text-white opacity-[0.04] leading-none text-center"
+                    style={{ fontSize: 'clamp(6rem, 20vw, 14rem)' }}
+                >
+                    WYNKWASH
+                </h1>
+            </div>
             {/* ── HERO CONTENT ── */}
             <div className="relative z-30 container mx-auto px-6 flex flex-col items-center justify-center" style={{ minHeight: '100svh' }}>
                 <div className="max-w-2xl w-full text-center py-32">
@@ -166,30 +175,49 @@ export default function Hero() {
                         Now in Bangalore
                     </motion.div>
 
+                    {/* Large Hero Logo */}
+                    <motion.div
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.05 }}
+                        className="flex justify-center mb-8"
+                    >
+                        <img
+                            src="/assets/logo.png"
+                            alt="WynkWash Logo"
+                            className="h-24 sm:h-28 md:h-36 w-auto object-contain drop-shadow-2xl"
+                        />
+                    </motion.div>
+
                     {/* Main Headline */}
-                    <motion.h1
+                    <motion.div
                         initial={{ opacity: 0, y: 36 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7, delay: 0.08 }}
-                        className="font-black text-white leading-[1.02] tracking-tight mb-2"
+                        className="font-black leading-[1.02] tracking-tight mb-6"
                         style={{ fontSize: 'clamp(2.8rem, 6vw, 5rem)' }}
                     >
-                        Your Premium Doorstep
-                    </motion.h1>
-                    <motion.h1
-                        initial={{ opacity: 0, y: 36 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.7, delay: 0.14 }}
-                        className="font-black leading-[1.02] tracking-tight mb-6"
-                        style={{
-                            fontSize: 'clamp(2.8rem, 6vw, 5rem)',
-                            background: 'linear-gradient(90deg, #60b8ff 0%, #a8ddff 40%, #38d9f5 100%)',
-                            WebkitBackgroundClip: 'text',
-                            WebkitTextFillColor: 'transparent',
-                        }}
-                    >
-                        Car Wash Service
-                    </motion.h1>
+
+                        <div className="text-white">
+                            Your Premium
+                        </div>
+
+                        <div className="text-white -mt-2">
+                            Doorstep
+                        </div>
+
+                        <div
+                            className="-mt-2"
+                            style={{
+                                background: 'linear-gradient(90deg, #60b8ff 0%, #a8ddff 40%, #38d9f5 100%)',
+                                WebkitBackgroundClip: 'text',
+                                WebkitTextFillColor: 'transparent',
+                            }}
+                        >
+                            Car Wash Service
+                        </div>
+
+                    </motion.div>
 
                     {/* Sub-headline */}
                     <motion.p
