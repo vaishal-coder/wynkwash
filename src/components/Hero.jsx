@@ -160,7 +160,7 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.55 }}
-                        className="inline-flex items-center gap-2 mb-7 px-4 py-2 rounded-full text-sm font-semibold text-blue-200 border border-blue-400/25 bg-blue-500/10 backdrop-blur-sm"
+                        className="inline-flex items-center gap-2 mb-7 px-4 py-2 rounded-md text-sm font-semibold text-blue-200 border border-blue-400/25 bg-blue-500/10 backdrop-blur-sm"
                     >
                         <MapPin size={13} className="text-blue-400" />
                         Now in Bangalore
@@ -213,7 +213,7 @@ export default function Hero() {
                             href="https://wa.me/918870037600?text=Hello%20Team!%20I%E2%80%99m%20interested%20in%20a%20premium%20doorstep%20car%20wash.%20Please%20share%20pricing%20and%20availability."
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group inline-flex items-center justify-center gap-3 text-white font-bold px-9 py-4 rounded-full shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                            className="group inline-flex items-center justify-center gap-3 text-white font-bold px-9 py-4 rounded-md shadow-xl transition-all duration-300 transform hover:-translate-y-1"
                             style={{
                                 background: 'linear-gradient(135deg, #0ea5e9 0%, #0284c7 50%, #075985 100%)',
                                 boxShadow: '0 8px 32px rgba(14,165,233,0.35)',
@@ -224,7 +224,7 @@ export default function Hero() {
                         </a>
                         <a
                             href="tel:+918870037600"
-                            className="inline-flex items-center justify-center gap-2 text-white font-semibold px-8 py-4 rounded-full border border-white/20 backdrop-blur-md bg-white/5 hover:bg-white/10 hover:border-blue-400/50 transition-all duration-300"
+                            className="inline-flex items-center justify-center gap-2 text-white font-semibold px-8 py-4 rounded-md border border-white/20 backdrop-blur-md bg-white/5 hover:bg-white/10 hover:border-blue-400/50 transition-all duration-300"
                         >
                             <Phone size={17} />
                             88700 37600
@@ -239,14 +239,14 @@ export default function Hero() {
                         className="flex flex-wrap gap-3 mb-8 justify-center"
                     >
                         {[
-                            { dot: 'bg-blue-400', label: 'Branded Products' },
+                            { dot: 'bg-blue-400', label: '3M Branded Products' },
                             { dot: 'bg-cyan-400', label: 'No Prepayment Required' },
                             { dot: 'bg-blue-400', label: 'Trained Professionals' },
                             { dot: 'bg-cyan-400', label: '6 AM – 9 PM, All Days' },
                         ].map(({ dot, label }) => (
                             <span
                                 key={label}
-                                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium text-white/70 border border-white/10 bg-white/5 backdrop-blur-sm"
+                                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-md text-xs font-medium text-white/70 border border-white/10 bg-white/5 backdrop-blur-sm"
                             >
                                 <span className={`w-1.5 h-1.5 rounded-full ${dot} opacity-80 shrink-0`} />
                                 {label}

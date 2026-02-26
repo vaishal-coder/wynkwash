@@ -252,7 +252,7 @@ const features = [
     {
         Icon: IconPremiumProducts,
         title: "Premium Products",
-        desc: "branded wax, shampoos and microfiber tools — the same quality used by auto showrooms.",
+        desc: "3M branded wax, shampoos and microfiber tools — the same quality used by auto showrooms.",
         glow: "#06b6d4",
     },
     {
