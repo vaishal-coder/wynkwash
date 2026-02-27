@@ -202,10 +202,19 @@ export default function Hero() {
                             Your Premium
                         </div>
 
-                        <div className="text-white -mt-2">
+                        {/* Doorstep in Blue Gradient */}
+                        <div
+                            className="-mt-2"
+                            style={{
+                                background: 'linear-gradient(90deg, #60b8ff 0%, #a8ddff 40%, #38d9f5 100%)',
+                                WebkitBackgroundClip: 'text',
+                                WebkitTextFillColor: 'transparent',
+                            }}
+                        >
                             Doorstep
                         </div>
 
+                        {/* Car Wash Service in Blue Gradient */}
                         <div
                             className="-mt-2"
                             style={{
