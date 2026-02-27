@@ -17,7 +17,7 @@ export default function Navbar() {
     const navLinks = [
         { name: 'Home', href: '#home' },
         { name: 'Services', href: '#services' },
-        { name: 'Pricing', href: WA_PRICING_URL, external: true },
+        { name: 'Pricing', href: '#book' },
     ];
 
     return (
@@ -38,27 +38,15 @@ export default function Navbar() {
 
                     {/* Desktop Menu */}
                     <div className="hidden md:flex items-center gap-7">
-                        {navLinks.map((link) =>
-                            link.external ? (
-                                <a
-                                    key={link.name}
-                                    href={link.href}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className={`text-sm font-semibold transition-colors ${scrolled ? 'text-green-700 hover:text-green-600' : 'text-green-300 hover:text-white'}`}
-                                >
-                                    {link.name}
-                                </a>
-                            ) : (
-                                <a
-                                    key={link.name}
-                                    href={link.href}
-                                    className={`text-sm font-medium transition-colors ${scrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-blue-200'}`}
-                                >
-                                    {link.name}
-                                </a>
-                            )
-                        )}
+                        {navLinks.map((link) => (
+                            <a
+                                key={link.name}
+                                href={link.href}
+                                className={`text-sm font-medium transition-colors ${scrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-blue-200'}`}
+                            >
+                                {link.name}
+                            </a>
+                        ))}
 
                         <div className="flex items-center gap-5 border-l border-gray-300/40 pl-7">
                             {/* Social */}
@@ -106,29 +94,16 @@ export default function Navbar() {
             {isOpen && (
                 <div className="absolute top-full left-0 w-full bg-white/95 backdrop-blur-md shadow-xl py-6 flex flex-col items-center gap-6 md:hidden border-t border-gray-200">
 
-                    {navLinks.map((link) =>
-                        link.external ? (
-                            <a
-                                key={link.name}
-                                href={link.href}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                onClick={() => setIsOpen(false)}
-                                className="text-gray-900 font-semibold text-lg tracking-wide hover:text-blue-600 transition-colors"
-                            >
-                                {link.name}
-                            </a>
-                        ) : (
-                            <a
-                                key={link.name}
-                                href={link.href}
-                                onClick={() => setIsOpen(false)}
-                                className="text-gray-900 font-semibold text-lg tracking-wide hover:text-blue-600 transition-colors"
-                            >
-                                {link.name}
-                            </a>
-                        )
-                    )}
+                    {navLinks.map((link) => (
+                        <a
+                            key={link.name}
+                            href={link.href}
+                            onClick={() => setIsOpen(false)}
+                            className="text-gray-900 font-semibold text-lg tracking-wide hover:text-blue-600 transition-colors"
+                        >
+                            {link.name}
+                        </a>
+                    ))}
 
                     <div className="w-full px-6 flex flex-col gap-3 mt-2">
                         <a

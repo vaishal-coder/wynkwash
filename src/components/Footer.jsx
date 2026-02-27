@@ -49,10 +49,15 @@ export default function Footer() {
                         <h4 className="text-lg font-semibold text-blue-200 mb-2">Contact Us</h4>
 
                         {/* Location */}
-                        <div className="flex items-start gap-3 text-gray-400">
-                            <MapPin size={18} className="text-blue-400 mt-0.5 shrink-0" />
+                        <a
+                            href="https://maps.app.goo.gl/8Sbyn1KqPxS33LTs7"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-start gap-3 text-gray-400 hover:text-white transition-colors group"
+                        >
+                            <MapPin size={18} className="text-blue-400 mt-0.5 shrink-0 group-hover:text-blue-300" />
                             <span>Bengaluru, Karnataka, India</span>
-                        </div>
+                        </a>
 
                         {/* Phone — clickable */}
                         <a href="tel:+918870037600" className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors group">

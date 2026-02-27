@@ -2,7 +2,7 @@ import { MessageCircle, Phone } from 'lucide-react';
 
 export default function WhatsAppSection() {
     return (
-        <section className="py-20 bg-gradient-to-r from-[#25D366] to-[#128C7E] text-white">
+        <section id="book" className="py-20 bg-gradient-to-r from-[#25D366] to-[#128C7E] text-white">
             <div className="container mx-auto px-6 flex flex-col items-center md:flex-row md:justify-between gap-12">
 
                 {/* Left: CTA text + buttons */}
