@@ -1,6 +1,7 @@
 import Hero from '../components/Hero';
 import VideoShowcase from '../components/VideoShowcase';
 import Services from '../components/Services';
+import Pricing from '../components/Pricing';
 import Features from '../components/Features';
 import WhatsAppSection from '../components/WhatsAppSection';
 import WhatsAppFloat from '../components/WhatsAppFloat';
@@ -11,6 +12,7 @@ export default function Home() {
             <Hero />
             <VideoShowcase />
             <Services />
+            <Pricing />
             <WhatsAppSection />
             <Features />
             <WhatsAppFloat />
