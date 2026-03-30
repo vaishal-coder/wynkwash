@@ -431,7 +431,7 @@ export default function Hero() {
 
             {/* ── LEFT SIDE AD — confetti burst on entry (lg+ only) ── */}
             <motion.a
-                href="#book"
+                href="#services"
                 initial={{ opacity: 0, x: -80, scale: 0.5 }}
                 animate={{
                     opacity: sideAdsVisible ? 1 : 0,
